@@ -1,24 +1,23 @@
 #include <iostream>
-#include <string>
+#include <stdio.h>
+#include <ctype.h>
+#include <cstring>
 using namespace std;
-int main()
+int main(int argc, char* argv[])
+{ 
+if (argv[1][0] >= 'a' || argv[1][0] <= 'z')
 {
-int a, A;
-char x;
-if (x == a){
-    cout<< "This is a lower case letter. \n";
-    cout<< -1 << endl;
-}
-if(x == A)
+    cout<< "This is a lower case letter." << endl;
+    return 1;
+    }
+else if (argv[1][0] >= 'A' || argv[1][0] <= 'Z')
 {
-    
-    cout<< "This is an upper case letter. \n";
-    cout<< 1 << endl;
+    cout<< "This is an upper case letter." << endl;
+    return -1;
 }
-else
+else 
 {
-    cout<< "Please only input letters for this program.";
-    cout<< 0 << endl;
+    cout<< "Please only input letters for this program." << endl;
+    return 0;
 }
-return 0;
 }
